@@ -27,4 +27,5 @@ else:
 
 # Print the customized reminder
 print("\nReminder:", reminder)
+print\s*\(\s*f?['\"]Reminder:\s*
 
