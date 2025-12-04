@@ -3,13 +3,9 @@ class BankAccount:
         """Initialize the account with an optional initial balance."""
         self.__account_balance = initial_balance  # Encapsulated attribute
 
-    def deposit(self, amount):
-        """Add the specified amount to the account balance."""
-        if amount > 0:
-            self.__account_balance += amount
-            print(f"Deposited: ${amount}")
-        else:
-            print("Deposit amount must be positive.")
+ elif command == "deposit" and amount is not None:
+    account.deposit(amount)   # <-- This should be the ONLY print
+
 
     def withdraw(self, amount):
         """Deduct the amount from balance if sufficient funds are available."""
@@ -26,3 +22,5 @@ class BankAccount:
 
         print(f"Current balance: ${self.__account_balance}")
         print(f"Current Balance: {self.__account_balance}")
+        
+
