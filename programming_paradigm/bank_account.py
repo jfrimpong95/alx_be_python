@@ -23,4 +23,6 @@ class BankAccount:
 
     def display_balance(self):
         """Display the current account balance."""
+
         print(f"Current balance: ${self.__account_balance}")
+        print(f"Current Balance: {self.__account_balance}")
