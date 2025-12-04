@@ -3,7 +3,7 @@ class BankAccount:
         """Initialize the account with an optional initial balance."""
         self.__account_balance = initial_balance  # Encapsulated attribute
 
- elif command == "deposit" and amount is not None:
+
     account.deposit(amount)   # <-- This should be the ONLY print
 
 
@@ -23,4 +23,5 @@ class BankAccount:
         print(f"Current balance: ${self.__account_balance}")
         print(f"Current Balance: {self.__account_balance}")
         
+
 
