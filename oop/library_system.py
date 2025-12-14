@@ -6,7 +6,7 @@ class Book:
         self.title = title
         self.author = author
 
-    def get_details(self):
+    def __str__(self):
         return f"'{self.title}' by {self.author}"
 
 
@@ -16,11 +16,28 @@ class EBook(Book):
         super().__init__(title, author)
         self.file_size = file_size  # in MB
 
-    def get_details(self):
-        return f"{super().get_details()} [EBook, {self.file_size}MB]"
+    def __str__(self):
+        return f"{super().__str__()} [EBook, {self.file_size}MB]"
 
 
 # Derived Class - PrintBook
 class PrintBook(Book):
     def __init__(self, title: str, author: str, page_count: int):
-        super().__init__(title, author
+        super().__init__(title, author)
+        self.page_count = page_count
+
+    def __str__(self):
+        return f"{super().__str__()} [PrintBook, {self.page_count} pages]"
+
+
+# Composition - Library
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book: Book):
+        self.books.append(book)
+
+    def list_books(self):
+        if not self.books:
+            print("The library is empty.")
