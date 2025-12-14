@@ -11,6 +11,6 @@ class Calculator:
 
     @classmethod
     def multiply(cls, a, b):
-        """Prints calculation type and returns the product of two numbers."""
-        print(cls.calculation_type)
+        """Prints calculation type and returns the product."""
+        print(f"Calculation type: {cls.calculation_type}")
         return a * b
